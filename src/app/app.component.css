@@ -1,138 +1,155 @@
-/* General page setup */
-html, body {
+/* New Font and Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
 }
 
-/* Parallax Background */
-.parallax-background {
+/* Hero Section with Parallax Background */
+.hero-section {
+  height: 100vh;
+  width: 100%;
   background-image: url("https://images.pexels.com/photos/1655166/pexels-photo-1655166.jpeg");
-  height: 500px; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-/* Profile Section */
-.profile-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
-  top: -150px;
-  text-align: center;
-  color: white;
-  padding-bottom: 20px;
+  z-index: 1;
 }
 
-.profile-section h1, .profile-section h2 {
+/* Overlay for text and profile info */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.profile-info-container {
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 0 5%;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+.profile-info-container h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.profile-info-container h2 {
+  font-size: 1.5rem;
   margin-top: 0;
+  font-weight: 400;
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
   border: 4px solid white;
+  object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .location {
   font-size: 1.2rem;
   margin-top: 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.social-icons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
 .social-icons a {
   color: white;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-right: 15px;
+  transition: color 0.3s;
 }
 
-/* Hobbies Section */
+.social-icons a:hover {
+  color: #ddd;
+}
+
+/* Content Section (Below the hero) */
 .content-section {
   background-color: #f4f4f4;
-  padding: 20px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  padding: 50px 20px;
+  z-index: 2;
+  position: relative;
 }
 
+/* Hobbies with Videos */
 .hobbies-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .hobby-item {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeIn 1s forwards;
-  opacity: 0;
-}
-
-.hobby-item:nth-child(1) { animation-delay: 0.5s; }
-.hobby-item:nth-child(2) { animation-delay: 1s; }
-.hobby-item:nth-child(3) { animation-delay: 1.5s; }
-
-.hobby-item h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #0056b3;
-}
-
-.hobby-link {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.hobby-image {
+  position: relative;
   width: 100%;
-  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-video {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  display: block;
 }
 
-.hobby-image:hover {
-  transform: scale(1.05);
-}
-
-iframe {
-  border: none;
-  border-radius: 8px;
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 400px;
-  height: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.3s;
 }
 
-/* Keyframe Animation for Hobbies */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hobby-item:hover .video-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background-color: #ddd;
 }
