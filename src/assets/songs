@@ -1,0 +1,42 @@
+[
+  {
+    "title": "The Ketchup Song (Aserejé)",
+    "album": "Hijas del Tomate",
+    "albumImage": "https://upload.wikimedia.org/wikipedia/en/e/e4/The_Ketchup_Song_(Aserej%C3%A9).jpg",
+    "duration": 204,
+    "rating": 4,
+    "video_url": "https://www.youtube.com/watch?v=MBecbfFsUz8"
+  },
+  {
+    "title": "Dragostea Din Tei",
+    "album": "DiscO-Zone",
+    "albumImage": "https://upload.wikimedia.org/wikipedia/en/a/ad/Dragostea_Din_Tei.jpg",
+    "duration": 213,
+    "rating": 5,
+    "video_url": "https://www.youtube.com/watch?v=Y0-qS-kS8e8"
+  },
+  {
+    "title": "Oops!... I Did It Again",
+    "album": "Oops!... I Did It Again",
+    "albumImage": "https://upload.wikimedia.org/wikipedia/en/2/23/Britney_Spears_-_Oops%21..._I_Did_It_Again.png",
+    "duration": 211,
+    "rating": 5,
+    "video_url": "https://www.youtube.com/watch?v=CduA0TULgFU"
+  },
+  {
+    "title": "Barbie Girl",
+    "album": "Aquarium",
+    "albumImage": "https://upload.wikimedia.org/wikipedia/en/e/e6/Aqua-aquarium-album-cover.jpg",
+    "duration": 196,
+    "rating": 4,
+    "video_url": "https://www.youtube.com/watch?v=ZyhrYis509A"
+  },
+  {
+    "title": "Livin' la Vida Loca",
+    "album": "Ricky Martin",
+    "albumImage": "https://upload.wikimedia.org/wikipedia/en/6/6f/Ricky_Martin_-_Ricky_Martin.jpg",
+    "duration": 243,
+    "rating": 5,
+    "video_url": "https://www.youtube.com/watch?v=p47fEXGabaY"
+  }
+]
