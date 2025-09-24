@@ -34,6 +34,7 @@ body {
 }
 
 .profile-info-container {
+  font-family: "Roboto Mono", monospace;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   padding: 0 5%;
@@ -88,6 +89,7 @@ body {
 }
 
 .section-title {
+  font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
@@ -117,6 +119,7 @@ body {
   object-fit: cover;
 }
 .image-overlay {
+  font-family: 'Roboto Mono', monospace;
   position: absolute;
   top: 0;
   left: 0;
