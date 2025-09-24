@@ -1,6 +1,6 @@
 /* New Font and Global Styles */
 body {
-  font-family: 'Roboto', sans-serif; /* New font */
+  font-family: 'Roboto Mono', monospace;
   margin: 0;
   padding: 0;
 }
@@ -87,6 +87,12 @@ body {
   position: relative;
 }
 
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 /* Hobbies with Videos */
 .hobbies-container {
   display: flex;
@@ -104,12 +110,12 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hobby-video {
+.hobby-media {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
-
 .video-overlay {
   position: absolute;
   top: 0;
